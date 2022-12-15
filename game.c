@@ -57,11 +57,11 @@ int main(){
     float s1 = 0;
     int x1 = 0;
     int y1 = 0;
-    int x = 400; // rnd(1) * 800 + 200;
-    int y = 445;    //rnd(1) * 800 + 200;
+    int x =  rnd(1) * 800 + 200;
+    int y =  rnd(1) * 800 + 200;
     n130:
-    s = 75; //rnd(1) * 20 + 50;
-    s1 = 65; //rnd(1) * 20 + 50;
+    s = rnd(1) * 20 + 50;
+    s1 = rnd(1) * 20 + 50;
     printf ("-------MISSILE-----         ");
     printf ("--------SAM--------         ------\n");
     printf ("MILES         ");
@@ -87,7 +87,7 @@ int main(){
         }
         scanf("%f",&T1);
         T1=T1/57.296;
-        int H = 80; //rnd(1) * 200 + 1;
+        int H = rnd(1) * 200 + 1;
         if (H > 0) {
             goto n290;
         }
@@ -113,8 +113,8 @@ int main(){
         
         b=sqrt(x*x + y*y)/1000;
         T = atan((float)y/(float)x);
-        x = (int)(x-s*cos(T)+ 0.45 /*rnd(1)*/*20+r);
-        y = (int)(y-s*sin(T)+ 0.78     /*rnd(1)*/*20+r);
+        x = (int)(x-s*cos(T)+ rnd(1)*20+r);
+        y = (int)(y-s*sin(T)+ rnd(1)*20+r);
         d = sqrt((x-x1)*(x-x1) + (y-y1)*(y-y1) );
         
         if (d <= 5 ) {
